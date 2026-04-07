@@ -1,0 +1,38 @@
+ReadFloatArray
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Files](fileoperations.md)  /  [CFileBin](cfilebin.md) / ReadFloatArray
+
+[![Previous](previous.png)](cfilebinreadlongarray.md) 
+[![Next](next.png)](cfilebinreaddoublearray.md)
+
+ReadFloatArray
+
+Reads an array of float type variables from file.
+
+```
+bool  ReadFloatArray(
+   float&  array[],            // array
+   int     start_item=0,       // start element
+   int     items_count=-1      // number of elements
+   )
+```
+
+Parameters
+
+array[]
+
+[in]  Reference to the variable for placing read data.
+
+start\_item=0
+
+[in]  Start element to read from.
+
+items\_count=-1
+
+[in]  Number of elements to read (-1 - read to the end of file).
+
+Return Value
+
+true - successful, false - cannot read the data.

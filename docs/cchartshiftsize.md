@@ -1,0 +1,40 @@
+ShiftSize
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Price Charts](cchart.md) / ShiftSize
+
+[![Previous](previous.png)](cchartshift.md) 
+[![Next](next.png)](cchartautoscroll.md)
+
+ShiftSize (Get Method)
+
+Gets the value of "ShiftSize" property (in percents).
+
+```
+double  ShiftSize() const
+```
+
+Return Value
+
+Value of "ShiftSize" property of the chart assigned to the class instance. If there is no chart assigned, it returns [EMPTY\_VALUE](otherconstants.md).
+
+ShiftSize (Set Method)
+
+Sets new value for "Shift" property (in percents).
+
+```
+bool  ShiftSize(
+   double  shift_size      // property value
+   )
+```
+
+Parameters
+
+shift\_size
+
+[in]  New value for "ShiftSize" property (in percents).
+
+Return Value
+
+true - successful, false - cannot change the property.

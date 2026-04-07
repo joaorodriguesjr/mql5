@@ -1,0 +1,32 @@
+FolderDelete
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Files](fileoperations.md)  /  [CFile](cfile.md) / FolderDelete
+
+[![Previous](previous.png)](cfilefoldercreate.md) 
+[![Next](next.png)](cfilefolderclean.md)
+
+FolderDelete
+
+Deletes specified folder.
+
+```
+bool  FolderDelete(
+   const string  folder_name      // folder name
+   )
+```
+
+Parameters
+
+folder\_name
+
+[in]  Name of the folder to delete. It contains path to the folder relative to the folder defined by FILE\_COMMON flag.
+
+Return Value
+
+true - successful, false - cannot delete the folder.
+
+Note
+
+The working folder is dependent on the flag that was previously set/reset using the SetCommon() method.

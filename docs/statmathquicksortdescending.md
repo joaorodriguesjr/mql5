@@ -1,0 +1,39 @@
+MathQuickSortDescending
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Mathematics](mathematics.md)  /  [Statistics](stat.md)  /  [Subfunctions](mathsubfunctions.md) / MathQuickSortDescending
+
+[![Previous](previous.png)](statmathquicksortascending.md) 
+[![Next](next.png)](statmathquicksort.md)
+
+MathQuickSortDescending
+
+The function for the simultaneous descending sorting of the array[] and indices[] arrays using the QuickSort algorithm. 
+
+```
+void  MathQuickSortDescending(
+   double&  array[],     // array of values
+   int&     indices[],   // array of indexes
+   int      first,       // initial value
+   int      last         // final value
+   )
+```
+
+Parameters
+
+array[]
+
+[in][out] Array to be sorted. 
+
+indices[]
+
+[in][out] Array to store the indexes of the original array. 
+
+first
+
+[in] Index of the element to start sorting from. 
+
+last
+
+[in] Index of the element to stop sorting at.
