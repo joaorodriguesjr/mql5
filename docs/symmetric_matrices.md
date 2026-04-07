@@ -1,0 +1,26 @@
+Symmetric Matrices
+
+
+
+[MQL5 Reference](index.md)  /  [Matrix and Vector Methods](matrix.md)  /  [OpenBLAS](openblas.md)  /  [Eigen Values](eigen_values.md) / Symmetric Matrices
+
+[![Previous](previous.png)](eigenvectorstriangularzblocked.md) 
+[![Next](next.png)](eigensymmetricdc.md)
+
+Symmetric Matrices
+
+Functions for computing eigenvalues and eigenvectors of symmetric or Hermitian matrices using the divide and conquer algorithm, making the process efficient and fast. These methods can be applied to matrices of different data types, including real and complex numbers.
+
+| Function | Action |
+| --- | --- |
+| [EigenSymmetricDC](eigensymmetricdc.md) | Compute eigenvalues and eigenvectors of a symmetric or Hermitian (complex conjugate) matrix using the divide-and-conquer algorithm (LAPACK functions [SYEVD](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/syevd.md), [HEEVD](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/heevd.md)). |
+| [EigenSymmetricQR](eigensymmetricqr.md) | Compute eigenvalues and eigenvectors of a symmetric or Hermitian (complex conjugate) matrix using the QR algorithm (LAPACK functions [SYEV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/syev.md), [HEEV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/heev.md)). |
+| [EigenSymmetricRobust](eigensymmetricrobust.md) | Compute eigenvalues and eigenvectors of a symmetric or Hermitian (complex conjugate) matrix using the Multiple Relatively Robust Representations, MRRR algorithm (LAPACK functions [SYEVR](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/syevr.md), [HEEVR](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/heevr.md)). |
+| [EigenSymmetricBisect](eigensymmetricbisect.md) | Compute eigenvalues and eigenvectors of a symmetric or Hermitian (complex conjugate) matrix using the bisection algorithm (LAPACK functions [SYEVX](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/syevx.md), [HEEVX](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/heevx.md)). |
+| [EigenSymmetricDC2s](eigensymmetricdc2s.md) | Compute all eigenvalues and, optionally, eigenvectors of a real symmetric or Hermitian (complex conjugated) matrix using the 2stage technique for the reduction to tridiagonal. If eigenvectors are desired, it uses a divide and conquer algorithm (LAPACK functions SYEVD\_2STAGE, HEEVD\_2STAGE). |
+| [EigenSymmetricQR2s](eigensymmetricqr2s.md) | Compute all eigenvalues and, optionally, eigenvectors of a real symmetric or Hermitian (complex conjugated) matrix using the 2stage technique for the reduction to tridiagonal (LAPACK functions [SYEV\_2STAGE](https://docs.amd.com/r/en-US/63860-AOCL-LAPACK/Symmetric-Eigen-Values-APIs?section=syev-2stage), HEEV\_2STAGE). |
+| [EigenSymmetricRobust2s](eigensymmetricrobust2s.md) | Compute eigenvalues and eigenvectors of a symmetric or Hermitian (complex conjugated) matrix using the 2stage technique for the reduction to tridiagonal then using the Multiple Relatively Robust Representations, MRRR algorithm (LAPACK functions [SYEVR\_2STAGE](https://docs.amd.com/r/en-US/63860-AOCL-LAPACK/Symmetric-Eigen-Values-APIs?section=syevr-2stage), HEEVR\_2STAGE). |
+| [EigenSymmetricBisect2s](eigensymmetricbisect2s.md) | Compute eigenvalues and eigenvectors of a symmetric or Hermitian (complex conjugated) matrix using the 2stage technique for the reduction to tridiagonal then using the bisection algorithm (LAPACK functions [SYEVX\_2STAGE](https://docs.amd.com/r/en-US/63860-AOCL-LAPACK/Symmetric-Eigen-Values-APIs?section=syevx-2stage), HEEVX\_2STAGE). |
+| [EigenSymmetric2DC](eigensymmetric2dc.md) | Compute all the eigenvalues, and optionally, the eigenvectors of a generalized symmetric-definite eigenproblem, of the form  A*x=(lambda)*B*x,  A*Bx=(lambda)*x,  or B*A*x=(lambda)*x. LAPACK functions [SYGVD](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/sygvd.md), [HEGVD](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/hegvd.md). |
+| [EigenSymmetric2QR](eigensymmetric2qr.md) | Compute all the eigenvalues, and optionally, the eigenvectors of a generalized symmetric-definite eigenproblem, of the form A*x=(lambda)*B*x,  A*Bx=(lambda)*x,  or B*A*x=(lambda)*x. LAPACK functions [SYGV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/sygv.md), [HEGV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/hegv.md). |
+| [EigenSymmetric2Bisect](eigensymmetric2bisect.md) | Compute all the eigenvalues, and optionally, the eigenvectors of a generalized symmetric-definite eigenproblem, of the form A*x=(lambda)*B*x,  A*Bx=(lambda)*x,  or B*A*x=(lambda)*x. LAPACK functions [SYGVX](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/sygvx.md), [HEGVX](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/hegvx.md). |

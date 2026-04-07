@@ -1,0 +1,53 @@
+MathRandomBeta
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Mathematics](mathematics.md)  /  [Statistics](stat.md)  /  [Beta distribution](beta.md) / MathRandomBeta
+
+[![Previous](previous.png)](mathquantilebeta.md) 
+[![Next](next.png)](mathmomentsbeta.md)
+
+MathRandomBeta
+
+Generates a pseudorandom variable distributed according to the law of beta distribution with the a and b parameters. In case of error it returns [NaN](double.md).
+
+```
+double  MathRandomBeta(
+   const double  a,             // the first parameter of beta distribution (shape1)
+   const double  b,             // the second parameter of beta distribution (shape2)
+   int&          error_code     // variable to store the error code
+   );
+```
+
+Generates pseudorandom variables distributed according to the law of beta distribution with the a and b parameters. In case of error it returns false. Analog of the [rbeta()](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Beta.md) in R.
+
+```
+bool  MathRandomBeta(
+   const double  a,              // the first parameter of beta distribution (shape1)
+   const double  b,              // the second parameter of beta distribution (shape2)
+   const int     data_count,     // amount of required data
+   double&       result[]        // array to obtain the pseudorandom variables
+   );
+```
+
+Parameters
+
+a
+
+[in]  The first parameter of beta distribution (shape1)
+
+b
+
+[in]  The second parameter of beta distribution (shape2).
+
+data\_count
+
+[in]  The number of pseudorandom variables to be obtained.
+
+error\_code
+
+[out]  Variable to store the error code.
+
+result[]
+
+[out]  Array to obtain the values of pseudorandom variables.

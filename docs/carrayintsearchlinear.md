@@ -1,0 +1,57 @@
+SearchLinear
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Data Collections](datastructures.md)  /  [CArrayInt](carrayint.md) / SearchLinear
+
+[![Previous](previous.png)](carrayintsearchlast.md) 
+[![Next](next.png)](carrayintsave.md)
+
+SearchLinear
+
+Searches for the element equal to the sample in the array.
+
+```
+int  SearchLinear(
+   int  element      // sample
+   ) const
+```
+
+Parameters
+
+element
+
+[in]  The sample element to search in the array.
+
+Return Value
+
+The position of the found element - successful, -1 - the element not found.
+
+Note
+
+The method uses the linear search (or sequential search) algorithm for unsorted arrays.
+
+Example:
+
+```
+//--- example for CArrayInt::SearchLinear(int)
+#include <Arrays\ArrayInt.mqh>
+//---
+void OnStart()
+  {
+   CArrayInt *array=new CArrayInt;
+   //---
+   if(array==NULL)
+     {
+      printf("Object create error");
+      return;
+     }
+   //--- add arrays elements
+   //--- . . .
+   //--- search element
+   if(array.SearchLinear(10000)!=-1) printf("Element found");
+   else                              printf("Element not found");
+   //--- delete array
+   delete array;
+  }
+```
