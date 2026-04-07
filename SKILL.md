@@ -57,7 +57,7 @@ When the query involves an enum (e.g., `ENUM_TIMEFRAMES`, `ENUM_ORDER_TYPE`) or 
 
 When the user describes a task or concept (e.g., "How do I place a trade?" or "How do I draw on the chart?"):
 
-1. **Start from the Table of Contents.** Read `<docs>/000_contents.md` with `view_file`.
+1. **Start from the Table of Contents.** Read `<docs>/index.md` with `view_file`.
    This lists all major documentation sections with links to their category pages. Example entries:
    - `[Chart Operations](chart_operations.md)` — for chart manipulation
    - `[Trade Functions](trading.md)` — for trading operations
@@ -147,7 +147,7 @@ When answering MQL5 queries based on this documentation:
 
 ### Example 2: "How do I add an indicator to a chart programmatically?"
 
-1. Not sure of the exact function → **Strategy C**: read `<docs>/000_contents.md`.
+1. Not sure of the exact function → **Strategy C**: read `<docs>/index.md`.
 2. Find `[Chart Operations](chart_operations.md)` in the table of contents.
 3. Read `<docs>/chart_operations.md` → find `ChartIndicatorAdd` in the function table.
 4. Read `<docs>/chartindicatoradd.md` for the full signature, parameters, and example.
@@ -161,7 +161,7 @@ When answering MQL5 queries based on this documentation:
 
 ### Example 4: "How do I use the for loop in MQL5?"
 
-1. This is about language syntax → **Strategy C**: read `<docs>/000_contents.md`.
+1. This is about language syntax → **Strategy C**: read `<docs>/index.md`.
 2. Find `[Language Basics](basis.md)`.
 3. Read `<docs>/basis.md` → find link to `[Operators](operators.md)`.
 4. Navigate to the `for` loop page from there.
