@@ -16,7 +16,7 @@ This repository contains the official **MQL5** (MetaQuotes Language 5) reference
 ```
 mql5/
 ├── docs/              # MQL5 documentation in Markdown (~4500 files)
-│   ├── 000_contents.md          # Main table of contents
+│   ├── index.md                 # Main table of contents
 │   ├── function_indices.md      # A-Z index of all functions
 │   ├── constant_indices.md      # A-Z index of all constants and enums
 │   └── ...                      # Function, class, and example pages
@@ -36,7 +36,7 @@ The `docs/` directory contains the complete language reference, organized in a f
 
 | File | Description |
 |------|-------------|
-| `000_contents.md` | Table of contents with links to all sections |
+| `index.md` | Table of contents with links to all sections |
 | `function_indices.md` | Alphabetical index of all MQL5 functions |
 | `constant_indices.md` | Alphabetical index of all constants and enums |
 
