@@ -1,0 +1,44 @@
+EllipseAA
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Custom Graphics](canvasgraphics.md)  /  [CCanvas](ccanvas.md) / EllipseAA
+
+[![Previous](previous.png)](ccanvasellipse.md) 
+[![Next](next.png)](ccanvasellipsewu.md)
+
+EllipseAA
+
+Draws an ellipse based on two points using anti-aliasing algorithm.
+
+```
+void  EllipseAA(
+   int         x1,      // X coordinate
+   int         y1,      // Y coordinate
+   int         x2,      // X coordinate
+   int         y2,      // Y coordinate
+   const uint  clr      // color
+   );
+```
+
+Parameters
+
+x1
+
+[in]  X coordinate of the first point forming an ellipse.
+
+y1
+
+[in]  Y coordinate of the first point forming an ellipse.
+
+x2
+
+[in]  X coordinate of the second point forming an ellipse.
+
+y2
+
+[in]  Y coordinate of the second point forming an ellipse.
+
+clr
+
+[in]  Color in ARGB format.

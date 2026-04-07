@@ -1,0 +1,28 @@
+Load
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Graphic Objects](chart_object_classes.md)  /  [Control Objects](obj_controls.md)  /  [CChartObjectText](cchartobjecttext.md) / Load
+
+[![Previous](previous.png)](cchartobjecttextsave.md) 
+[![Next](next.png)](cchartobjecttexttype.md)
+
+Load
+
+Loads object parameters from file.
+
+```
+virtual bool  Load(
+   int  file_handle      // file handle
+   )
+```
+
+Parameters
+
+file\_handle
+
+[in]  handle of the binary file already opened by the [FileOpen](fileopen.md) function.
+
+Return Value
+
+true - successful, false - error.

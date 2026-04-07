@@ -1,0 +1,30 @@
+Linear Equations
+
+
+
+[MQL5 Reference](index.md)  /  [Matrix and Vector Methods](matrix.md)  /  [OpenBLAS](openblas.md) / Linear Equations
+
+[![Previous](previous.png)](eigentridiagposdefq.md) 
+[![Next](next.png)](linearequationssolution.md)
+
+Linear Equations
+
+ 
+
+This section provides functions for solving systems of linear equations of the form A·X = B, where A is a square coefficient matrix, B is the right-hand side, and X is the solution matrix or vector. The methods support various data types (double, float, complex, complexf) and are based on LAPACK functions to ensure high precision and performance.
+
+The functions are categorized based on the type of the coefficient matrix A. Each function is overloaded to support both matrix and vector forms for the right-hand side (B) and the solution (X).
+
+| Function | Action |
+| --- | --- |
+| [LinearEquationsSolution](linearequationssolution.md) | Computes the solution to the system of linear equations with a square coefficient matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n general matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK function [GESV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/gesv.md). |
+| [LinearEquationsSolutionTriangular](linearequationssolutiontriangl.md) | Computes the solution to the system of linear equations with a square triangular coefficient matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n general matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK function [TRTRS](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/trtrs.md). |
+| [InverseTriangular](inversetriangular.md) | Computes the inverse of a upper or lower triangular matrix A. LAPACK function [TRTRI](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/trtri.md). |
+| [CondNumReciprocalTriangular](condnumreciprocaltriangular.md) | Estimates the reciprocal of the condition number of a upper or lower triangular matrix A in either the one-norm or infinity-norm. LAPACK function [TRCON](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/trcon.md). |
+| [LinearEquationsSolutionSy](linearequationssolutionsy.md) | Computes the solution to the system of linear equations with a symmetric or Hermitian conjugated matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n symmetric or Hermitian conjugated matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK functions [SYSV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/sysv.md), [HESV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/hesv.md). |
+| [LinearEquationsSolutionComplexSy](linearequationssolutioncomplexsy.md) | Computes the solution to the system of linear equations with a complex symmetric (not Hermitian conjugated!) matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n complex symmetric matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK function [SYSV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/sysv.md). |
+| [LinearEquationsSolutionSyPD](linearequationssolutionsypd.md) | Computes the solution to the system of linear equations with a symmetric or Hermitian conjugated positive-definite matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n symmetric or Hermitian conjugated positive-definite matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK function [POSV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/posv.md). |
+| [LinearEquationsSolutionGeTrid](linearequationssolutiongetri.md) | Computes the solution to the system of linear equations with a general (nonsymmetric) tridiagonal coefficient matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n general tridiagonal matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK function [GTSV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/gtsv.md). |
+| [LinearEquationsSolutionSyTridPD](linearequationssolutionsytripd.md) | Computes the solution to the system of linear equations with a symmetric tridiagonal positive-definite coefficient matrix A and multiple right-hand sides. A*X = B, where A is an n-by-n symmetric tridiagonal matrix, the columns of matrix B are individual right-hand sides, and the columns of X are the corresponding solutions. LAPACK function [PTSV](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/ptsv.md). |
+| [SylvesterEquationTriangular](sylvesterequationtriangular.md) | Solves Sylvester equation for real quasi-triangular or complex triangular matrices:  op(A)*X + X*op(B) = scale*C or op(A)*X - X*op(B) = scale*C where op(A) = A or A**T or A**H, and  A and B are both upper triangular. LAPACK function [TRSYL](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/trsyl.md). |
+| [SylvesterEquationTriangularBlocked](sylvesterequationtriangular3.md) | Solves Sylvester equation for real quasi-triangular or complex triangular matrices:  op(A)*X + X*op(B) = scale*C or op(A)*X - X*op(B) = scale*C where op(A) = A or A**T or A**H, and  A and B are both upper triangular. LAPACK function [TRSYL3](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2025-2/trsyl3.md). This is the block (BLAS level 3) version of [TRSYL](sylvesterequationtriangular.md). Faster up to 5 times but not so accurate. |

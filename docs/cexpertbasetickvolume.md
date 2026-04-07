@@ -1,0 +1,35 @@
+TickVolume
+
+
+
+[MQL5 Reference](index.md)  /  [Standard Library](standardlibrary.md)  /  [Strategy Modules](expertclasses.md)  /  [Base classes for Expert Advisors](expertbaseclasses.md)  /  [CExpertBase](cexpertbase.md) / TickVolume
+
+[![Previous](previous.png)](cexpertbasetime.md) 
+[![Next](next.png)](cexpertbaserealvolume.md)
+
+TickVolume
+
+Gets the element of the TickVolume timeseries by index.
+
+```
+long  TickVolume(
+   int    ind         // index
+   )
+```
+
+Parameters
+
+ind
+
+[in]  Element index.
+
+Return Value
+
+If successful, it returns the numerical value of the TickVolume timeseries element with specified index, otherwise it returns EMPTY\_VALUE.
+
+Note
+
+The EMPTY\_VALUE is returned in two cases:
+
+1. Timeseries is not used (the corresponding bit is not set).
+2. Element index is out of range.
