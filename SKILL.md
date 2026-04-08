@@ -9,12 +9,13 @@ Always ground answers in actual documentation files. Never rely on training data
 
 ## 1. Documentation Location
 
-All files are in a **single flat directory**: `<this_skill_directory>/docs/` (resolve to absolute path at runtime). Referred to as `<docs>`.
+All files are in two main locations:
+1.  **Documentation (`<docs>`)**: `<this_skill_directory>/docs/` (resolve to absolute path at runtime). Contains Markdown reference files.
+2.  **Standard Library (`<include>`)**: `<this_skill_directory>/include/` (resolve to absolute path at runtime). Contains actual `.mqh` source code for OOP classes.
 
 File types:
-- **Index/category pages** (`chart_operations.md`, `trading.md`, `basis.md`) — list functions with links
-- **Function/detail pages** (`ordersend.md`, `chartindicatoradd.md`) — signatures, params, return values, notes, examples
-- **Master indices** — `function_indices.md` (all functions A-Z) and `constant_indices.md` (all constants/enums A-Z)
+- **Markdown Docs**: Index/category pages and Function/detail pages.
+- **Header Files (.mqh)**: Implementation of `Trade`, `Indicators`, `Expert`, and `Charts` classes.
 
 ## 2. Navigation Strategies
 
@@ -37,6 +38,13 @@ File types:
 1. `grep_search` on `<docs>/` with `CaseInsensitive: true`, `MatchPerLine: true`
 2. `view_file` the identified file
 
+### E: Standard Library Source Analysis (For Classes only)
+1. Use when the user asks about **Object-Oriented classes** (e.g., `CTrade`, `CiRSI`, `CArrayObj`)
+2. `list_dir` on `<include>/` to find the relevant sub-folder (e.g., `Trade/`, `Indicators/`)
+3. `grep_search` for the class name within that folder to find the `.mqh` file
+4. `view_file` the source code to understand internal logic, member variables, and error handling
+5. **Warning**: Built-in functions (like `OrderSend`) are NOT in `<include>`. Use `<docs>` for them.
+
 ## 3. Document Structure
 
 Each page has:
@@ -50,10 +58,13 @@ Each page has:
 ## 4. Answering Rules
 
 - **Always read the doc file** before stating any API detail
+- **Distinguish Native vs. Library**:
+    - **Native Functions** (e.g., `OrderSend`): Source code is private. Use `<docs>/` only.
+    - **Library Classes** (e.g., `CTrade`): Use `<include>/` for implementation details and `<docs>/` for usage.
 - **Quote the exact signature** — do not paraphrase parameter types or order
-- If not found in docs, say so explicitly rather than guessing
+- If not found in docs or include, say so explicitly rather than guessing
 - Include full signature, behavioral notes, enum values, and See Also references
-- Provide code examples following the doc's patterns
+- Provide code examples following the doc's patterns or library implementations
 
 ## 5. Common Pitfalls
 
