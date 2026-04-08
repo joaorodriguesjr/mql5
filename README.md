@@ -20,6 +20,10 @@ mql5/
 │   ├── function_indices.md      # A-Z index of all functions
 │   ├── constant_indices.md      # A-Z index of all constants and enums
 │   └── ...                      # Function, class, and example pages
+├── include/           # MQL5 Standard Library (source code)
+│   ├── Trade/                   # Trading classes (CTrade, CPositionInfo, etc.)
+│   ├── Indicators/              # Technical indicator classes
+│   └── ...                      # Other Object-Oriented implementations
 ├── SKILL.md           # AI navigation skill
 └── README.md
 ```
@@ -39,6 +43,13 @@ The `docs/` directory contains the complete language reference, organized in a f
 | `index.md` | Table of contents with links to all sections |
 | `function_indices.md` | Alphabetical index of all MQL5 functions |
 | `constant_indices.md` | Alphabetical index of all constants and enums |
+
+## Standard Library Source
+
+The `include/` directory contains the official **MQL5 Standard Library** source code (`.mqh` files). This provides the implementation layer for developers who prefer Object-Oriented Programming (OOP) over procedural calls.
+
+> [!NOTE]
+> While `include/` contains the source code for high-level classes (like `CTrade`), the **built-in language functions** (like `OrderSend()` or `iRSI()`) and constants are part of the terminal core and their source code is not public. Documentation for these native features is exclusively available in the `docs/` folder.
 
 ## AI Navigation Skill
 
